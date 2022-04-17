@@ -6,7 +6,8 @@
 # @File    : serializers.py
 # @Software: PyCharm
 from rest_framework import serializers
-from snippets.models import Snippet,LANGUAGE_CHOICES, STYLE_CHOICES
+from snippets.models import Snippet, LANGUAGE_CHOICES, STYLE_CHOICES
+
 
 class SnippetSerializer(serializers.ModelSerializer):
     # 这里的序列化器其实和django form类似, 如果使用ModelSerializer下面的代码就可以注释掉了
@@ -19,7 +20,7 @@ class SnippetSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Snippet
-        fields =['id',' title', 'code',' linenos', 'language', 'style']
+        fields = ['id', 'title', 'code', 'linenos', 'language', 'style']
 
     # def create(self, validated_data):
     #     # post方法，创建
