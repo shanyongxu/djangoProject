@@ -24,6 +24,7 @@ router.register(r'groups', views.GroupViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # 包括浏览器支持的的API的登录和注销视图
     path('api-auth/', include('rest_framework.urls')),
     path('', include('snippets.urls'))
 ]
